@@ -1,0 +1,20 @@
+groups:
+  - name: network-observability
+    rules:
+      - alert: ServiceDown
+        expr: service_up == 0
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: Lab service is down
+          description: The edge-api service is reporting service_up = 0.
+
+      - alert: HighLatency
+        expr: service_latency_ms > 200
+        for: 2m
+        labels:
+          severity: warning
+        annotations:
+          summary: Lab service latency is high
+          description: The edge-api service latency has crossed 200 ms.

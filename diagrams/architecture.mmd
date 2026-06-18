@@ -1,0 +1,5 @@
+flowchart LR
+    E[Exporter] --> P[Prometheus]
+    P --> A[Alertmanager]
+    A --> R[Alert receiver]
+    P --> G[Grafana]

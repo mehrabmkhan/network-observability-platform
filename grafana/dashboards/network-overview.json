@@ -1,0 +1,22 @@
+{
+  "uid": "network-overview",
+  "title": "Network Overview",
+  "timezone": "browser",
+  "schemaVersion": 39,
+  "version": 1,
+  "refresh": "10s",
+  "panels": [
+    {
+      "type": "stat",
+      "title": "Service Up",
+      "gridPos": { "h": 8, "w": 8, "x": 0, "y": 0 },
+      "targets": [{ "expr": "service_up", "refId": "A" }]
+    },
+    {
+      "type": "timeseries",
+      "title": "Latency",
+      "gridPos": { "h": 8, "w": 16, "x": 8, "y": 0 },
+      "targets": [{ "expr": "service_latency_ms", "refId": "A" }]
+    }
+  ]
+}

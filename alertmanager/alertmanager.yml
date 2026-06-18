@@ -1,0 +1,7 @@
+route:
+  receiver: alert-receiver
+
+receivers:
+  - name: alert-receiver
+    webhook_configs:
+      - url: http://alert-receiver:5000/alerts
