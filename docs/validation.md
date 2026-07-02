@@ -16,3 +16,5 @@ docker compose up --build
 - `http://localhost:8000/metrics`
 - `http://localhost:9090/targets`
 - `http://localhost:3000`
+
+CI runs config validation and pytest on relevant pushes and pull requests. The workflow can also be started manually from GitHub Actions for a fresh validation signal.
